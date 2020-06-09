@@ -184,4 +184,8 @@ write.csv(df_Ca2, file="Ca2_AD.csv")
 allDF<-(df_Sa + df_Sb + df_Ca1 + df_Ca2 + df_Cb)
 write.csv(allDF, file="Composite_AD.csv")
 
-
+############################
+## Antigenic Cartography ###
+############################
+myMDS<-cmdscale(allDF, k=2)
+plot(myMDS[1,], myMDS[2,])
